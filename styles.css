@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
+  background: linear-gradient(120deg, #e2c35d, #d88771);
+  background-repeat: no-repeat;
+  color: white;
+
+  min-height: 100vh;
+}
+
+/* start of the header section */
+header {
+  font-size: 1.5rem;
+  min-height: 20vh;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+/* end of the header section */
+
+/* start of the form section */
+form {
+  width: 80%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-gap: 5px;
+  grid-template-rows: 1fr;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  background: #fff;
+  border-radius: 5px;
+}
+
+form button {
+  color: #d88771;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+form button:hover {
+  color: #fff;
+  background: #d88771;
+}
+
+/* end of the form section */
+
+/* start of the filter section */
+
+.filter-container {
+  padding: 2rem 0 0 0;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+}
+
+.filter-list li {
+  justify-self: center;
+  cursor: pointer;
+}
+
+.filter-list i {
+  padding: 1rem;
+  pointer-events: none;
+}
+
+.undone-btn {
+  background-color: red;
+  border-radius: 5px;
+}
+
+.undone-btn:hover {
+  background-color: #fff;
+  color: red;
+}
+
+.all-tasks-btn {
+  background-color: green;
+  border-radius: 5px;
+}
+
+.all-tasks-btn:hover {
+  background-color: #fff;
+  color: green;
+}
+
+/* end of the filter section */
+
+/* start of the todo list section */
+.todo-container {
+  width: 100%;
+  max-width: 500px;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 2rem 0;
+}
+
+.todo {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-column-gap: 2px;
+
+  padding: 0.5rem;
+  font-size: 1.2rem;
+
+  margin: 0.5rem;
+  color: #222;
+
+  transition: all 0.3s linear;
+}
+
+.todo-item {
+  background-color: #fff;
+  border-radius: 5px;
+  padding-left: 0.25rem;
+
+  display: grid;
+  align-items: center;
+}
+
+.complete-button,
+.trash-button {
+  background-color: #ff6f47;
+  color: white;
+  padding: 1rem;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.complete-button {
+  background-color: rgb(25, 195, 6);
+}
+
+.fa-check,
+.fa-trash {
+  pointer-events: none;
+} /* so that browser does not register clicks on the i tags  */
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fallOnDelete {
+  transform: translateY(-8px) rotate(20deg);
+  opacity: 0;
+}
+
+/* end of the todo list section */
+
+.display-none {
+  display: none;
+}
