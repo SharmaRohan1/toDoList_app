@@ -66,6 +66,7 @@ form button:hover {
 .filter-container {
   padding: 2rem 0 0 0;
   width: 60%;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -73,7 +74,7 @@ form button:hover {
 .filter-list {
   list-style: none;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
 }
 
@@ -87,6 +88,16 @@ form button:hover {
   pointer-events: none;
 }
 
+.done-btn {
+  background-color: green;
+  border-radius: 5px;
+}
+
+.done-btn:hover {
+  background-color: #fff;
+  color: green;
+}
+
 .undone-btn {
   background-color: red;
   border-radius: 5px;
@@ -98,13 +109,13 @@ form button:hover {
 }
 
 .all-tasks-btn {
-  background-color: green;
+  background-color: blue;
   border-radius: 5px;
 }
 
 .all-tasks-btn:hover {
   background-color: #fff;
-  color: green;
+  color: blue;
 }
 
 /* end of the filter section */

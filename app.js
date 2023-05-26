@@ -115,8 +115,16 @@ undoneBtn.addEventListener("click", (e) => {
   const todos = todoList.children;
 
   for (let i = 0; i < todos.length; i++) {
-    if (todos[i].classList.contains("complete")) {
+    if (
+      todos[i].classList.contains("complete") &&
+      !todos[i].classList.contains("display-none")
+    ) {
       todos[i].classList.add("display-none");
+    } else if (
+      !todos[i].classList.contains("complete") &&
+      todos[i].classList.contains("display-none")
+    ) {
+      todos[i].classList.remove("display-none");
     }
   }
 });
@@ -129,6 +137,25 @@ allTasksBtn.addEventListener("click", (e) => {
   for (let i = 0; i < todos.length; i++) {
     if (todos[i].classList.contains("display-none")) {
       todos[i].classList.remove("display-none");
+    }
+  }
+});
+
+const doneBtn = document.querySelector(".done-btn");
+doneBtn.addEventListener("click", (e) => {
+  const todos = todoList.children;
+
+  for (let i = 0; i < todos.length; i++) {
+    if (
+      todos[i].classList.contains("complete") &&
+      todos[i].classList.contains("display-none")
+    ) {
+      todos[i].classList.remove("display-none");
+    } else if (
+      !todos[i].classList.contains("complete") &&
+      !todos[i].classList.contains("display-none")
+    ) {
+      todos[i].classList.add("display-none");
     }
   }
 });
